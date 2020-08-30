@@ -1,8 +1,10 @@
 import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Header from './components/Header';
-import Content from './components/Content';
-import Footer from './components/Footer';
+import Starships from './containers/Starships';
+import StarshipDetails from './containers/StarshipDetails';
+// import Content from './components/Content';
+// import Footer from './components/Footer';
 import './App.css';
 
 function App() {
@@ -12,12 +14,19 @@ function App() {
 				<header>
 					<Header />
 				</header>
-				<main>
+				<Switch>
+					<Route exact path='/' render={() => <Starships />} />
+					<Route
+						path='/starshipdetails'
+						render={props => <StarshipDetails {...props} />}
+					/>
+				</Switch>
+				{/* <main>
 					<Content />
 				</main>
 				<footer>
 					<Footer />
-				</footer>
+				</footer> */}
 			</div>
 		</Router>
 	);
