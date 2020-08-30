@@ -3,19 +3,40 @@ import './App.css';
 import axios from 'axios';
 
 function App() {
-  const getShips = e => {
-    e.preventDefault()
-    let url = `https://swapi.dev/api/starships/schema`
-    axios.get(url)
-    .then(res => {
-      console.log(res)
+  const [ships, setShips] = useState([])
+
+  // const getShips = () => {
+  //   let url = `https://swapi.dev/api/starships/`
+  //   axios.get(url)
+  //   .then(res => {
+  //     setShips(res.data.results)
+  //     console.log(res.data.results)
+  //   })
+  // }
+  const showShips = () => {
+    ships.map((s, i) => {
+      console.log(s.name)
+      return (
+        <li key={i}>{s.name}</li>
+      )
     })
   }
 
-  return (
+  // useEffect(() => {
+  //   let url = `https://swapi.dev/api/starships/`
+  //   axios.get(url)
+  //   .then(res => {
+  //     setShips(res.data.results)
+  //     console.log(res.data.results)
+  //   })
+  // })
 
+
+  return (
     <div className="App">
-      <h1 onClick={getShips}>Star Wars Starships</h1>
+      <h1>Star Wars Starships</h1>
+      <button>get ships</button>
+      <button onClick={showShips}>show ships</button>
     </div>
   );
 }
