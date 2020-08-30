@@ -3,7 +3,7 @@ import React from 'react';
 import {
   BrowserRouter as Router,
   Route, 
-  Link
+  Link,
 } from 'react-router-dom'
 
 import './App.css';
@@ -13,15 +13,16 @@ import StarshipPage from './StarshipPage';
 
 function App() {
   return (
-   
-     <Router>
+
+      <Router>
         <div className="App">
-        <Router exact path='/' render={() => <Homepage /> } />
-          <Router path='/starship' render={({location}) => 
+        <Route exact path='/' render={() => <Homepage /> } />
+          <Route path='/starship' render={({location}) => 
               <StarshipPage location={location}/>
             }/>
         </div>
      </Router>
+    
   );
 }
 

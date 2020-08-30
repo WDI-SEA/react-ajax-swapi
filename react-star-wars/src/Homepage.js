@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Homepage = () => {
   const [ships, setShips] = useState([])
@@ -16,28 +16,23 @@ const Homepage = () => {
   }, [])
 
   return (
+      
     <div>
+
+       
         {ships.map((s,i) => {
             return (
-
                 <Link 
                     to={{
                         pathname: 'starship',
                         state: s
                     }}
-
                     key={i}
-
                 >
-
                     {s.name}
-
                   </Link>
-
               )
-
           })}
-
       </div>
 
   )
