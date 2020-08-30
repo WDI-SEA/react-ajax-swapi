@@ -18,30 +18,31 @@ useEffect(() => {
     }).catch(err => console.log(err))
 
 }, [])
+return(
+<div className="container">
+        {starships = starships.map((starship, index) => {
+        return(
 
-    starships = starships.map((starship, index) => {
-    return(
-        <button>
-        <Link
-        to={{
-        pathname: '/starship',
-        state: starship
-        }}
-        key={starship.name}
-        >
-        {starship.name}
-        </Link>
-        </button>
-    
-        
-    ) 
-})
+            <div className="ship-item" key={index}>
+            <button>
+            <Link
+            to={{
+            pathname: '/starship',
+            state: starship
+            }}
+            key={starship.name}
+            >
+            {starship.name}
+            </Link>
+            </button>
+            </div>
+            
+        ) 
+    })}
+    </div>
+)
 
-  return (
-      <div>
-         {starships}
-      </div>
-  )
+ 
 
 }
 

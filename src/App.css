@@ -40,10 +40,19 @@
 button {
   height: 200px;
   width: 200px;
-  display: grid inline;
-  justify-content: center;
-  margin: 10px;
-  
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: end;
+  justify-content: space-evenly;
+  margin: 100px auto;
+}
+
+.ship-item {
+  text-align: center;
+  padding: 20px;
 }
 
 .goBack {

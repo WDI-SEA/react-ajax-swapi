@@ -3,7 +3,7 @@ import {useLocation, useHistory} from 'react-router'
 
 
 export default function StarShipPage(props) {
-    console.log(props)
+    console.log(props, '🤮')
     console.log(props.location)
     const location = useLocation();
     const history = useHistory();
