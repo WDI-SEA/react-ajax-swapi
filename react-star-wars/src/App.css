@@ -68,7 +68,7 @@
   border-radius: 20px;
   position: relative;
   margin: 0 auto;
-  margin-top: 200px;
+  top: 50px;
 }
 
 @keyframes App-logo-spin {
