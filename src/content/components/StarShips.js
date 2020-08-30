@@ -1,9 +1,22 @@
-import React from 'react';
+import React, {useState} from 'react';
+import {Link} from 'react-router-dom'
+
 
 function StarShips(props) {
+
+    let location ={
+        pathname: '/starShipDetails',
+        state: props.starShip
+    }
+
     return(
         <div>
-            <div>{props.starShips.name}</div>
+            
+            <Link 
+            to={location}
+            key={props.starShip.name}
+            > <div className="starShip">{props.starShip.name}</div></Link>
+            
         </div>
     )
 }
