@@ -24,11 +24,13 @@
   font-size: 20px;
   border-radius: 5px;
   /* align-content: center; */
+  color: white;
   
 }
-.ship {
-  text-align: center;
 
+.ship {
+  /* this aligns the buttons in the center of the page */
+  text-align: center;
 }
 
 .link-text {
@@ -40,4 +42,15 @@
 .loading {
   margin: 200px 0 0;
   text-align: center;
+}
+
+.details {
+  text-align: center;
+  background-color: rgb(0, 89, 68);
+  width: 350px;
+  height: 250px;
+  border-radius: 5px;
+  color: white;
+  position: relative;
+  margin: 0 auto;
 }

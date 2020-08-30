@@ -4,7 +4,7 @@ import './style.css'
 
 import {Link} from 'react-router-dom';
 
-const Homepage = (props) => {
+const Homepage = () => {
   let [ships, setShips] = useState([])
   let [loading, setLoading] = useState(true)
 
@@ -26,16 +26,16 @@ const Homepage = (props) => {
         {ships = ships.map((s, i) => {
           return (
             <div key={i} className='ship'>
-              <button className='butt'>
+              {/* <button className='butt'> */}
               <Link to={{
                 pathname: '/starship',
                 state: s
               }}
               key={i} 
               className='link-text'>
-              {s.name} 
+              <button className='butt'>{s.name} </button>
               </Link>
-              </button>
+              {/* </button> */}
             </div>
           )
         })}
@@ -47,7 +47,6 @@ const Homepage = (props) => {
       <h1 className='loading'>Loadin'</h1>
     )
   }
-  
 }
 
 export default Homepage;
