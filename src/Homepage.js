@@ -1,11 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
+import './style.css'
 
-import {
-  BrowserRouter as Router,
-  Route,
-  Link,
-} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 const Homepage = (props) => {
   let [ships, setShips] = useState([])
@@ -18,32 +15,36 @@ const Homepage = (props) => {
       console.log(res.data.results)
       setShips(res.data.results)
     })
+    .catch (err => console.log(err))
   }, [])
 
   // const allShips = props.ships.map((s, i) => {
   //   console.log(s.name)
   //   return <li key={i}>{s.name}</li>
   // })
+  // if (!ships) {
+  //   return <h1>No dice</h1>
+  // }
 
-
-  ships = ships.map((s, i) => {
-    return (<li key={i}>
-        <Link to={{
-          pathname: '/starship',
-          state: s
-        }}
-        key={i}
-        >
-        {s.name} 
-        </Link>
-    </li>
-  )
-  })
-  
   return(
-    <div>
-      <h1>Starship Homepage</h1>
-      {ships}
+    <div className='ship-container'>
+    {ships = ships.map((s, i) => {
+      return (
+        <div key={i} className='ship'>
+          <Link to={{
+            pathname: '/starship',
+            state: s
+          }}
+          key={i}
+          className='link-text'
+          >
+          {s.name} 
+          </Link>
+      </div>
+      
+    )
+    })}
+
     </div>
   )
   

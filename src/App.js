@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
-import './App.css';
+// import './App.css';
+import './style.css';
 
 import {
   BrowserRouter as Router,
@@ -12,17 +13,10 @@ import StarshipPage from './StarshipPage';
 
 function App() {
   // set ships array in state to api call data once ( empty [])
-  // useEffect(() => {
-  //   let url = `https://swapi.dev/api/starships/`
-  //   axios.get(url)
-  //   .then(res => {
-  //     console.log(res.data.results)
-  //     setShips(res.data.results)
-  //   })
-  // }, [])
-
  
   return (
+    <>
+    <h1 className='page-title'>Star Wars Starships</h1>
     <Router>
       <div className="App">
         {/* <Homepage /> */}
@@ -34,7 +28,7 @@ function App() {
         }/>
       </div>
     </Router>
- 
+    </>
   );
 }
 

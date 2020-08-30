@@ -1,5 +1,5 @@
 import React from 'react';
-import {useLocation, useHistory} from 'react-router-dom'
+import {useHistory} from 'react-router-dom'
 
 
 const StarshipPage = (props) => {
@@ -17,7 +17,7 @@ const StarshipPage = (props) => {
         <h4>
           COST: {props.location.state.cost_in_credits} credits
         </h4>
-        <button onClick={() => history.goBack()}>Go Back</button>
+        <button onClick={() => history.goBack()}>Return to Starship List</button>
     </div>
   )
 }
