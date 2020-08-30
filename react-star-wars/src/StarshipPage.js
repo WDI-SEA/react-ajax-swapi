@@ -1,7 +1,6 @@
-import React from react;
-import React, {Component} from react;
+import React from 'react';
 
-const StarPage = (props) => {
+const StarshipPage = (props) => {
     return (
         <div> 
             <h1>Details</h1>
@@ -14,4 +13,4 @@ const StarPage = (props) => {
     )
 }
 
-export default StarPage;
+export default StarshipPage;

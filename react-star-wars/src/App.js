@@ -1,21 +1,27 @@
 import React from 'react';
-// import logo from './logo.svg';
+
+import {
+  BrowserRouter as Router,
+  Route, 
+  Link
+} from 'react-router-dom'
+
 import './App.css';
-import Starships from './Starship';
-import StarPage from './StarPage';
+import Homepage from './Homepage';
+import StarshipPage from './StarshipPage';
+
 
 function App() {
   return (
-    <div className="App">
-      <Router>
-        <Switch>
-          <Route exact path="/" component={Starships} />
-          
-          
-        </Switch>
-      </Router>
-    
-    </div>
+   
+     <Router>
+        <div className="App">
+        <Router exact path='/' render={() => <Homepage /> } />
+          <Router path='/starship' render={({location}) => 
+              <StarshipPage location={location}/>
+            }/>
+        </div>
+     </Router>
   );
 }
 
