@@ -2,47 +2,48 @@ import React, {useState, useEffect} from 'react';
 import './App.css';
 import axios from 'axios';
 
+import {
+  BrowserRouter as Router,
+  Route,
+  Link
+} from 'react-router-dom';
+
+import Homepage from './Homepage';
+import StarshipPage from './StarshipPage';
+
 function App() {
   const [ships, setShips] = useState([])
-
-  // const getShips = () => {
-  //   let url = `https://swapi.dev/api/starships/`
-  //   axios.get(url)
-  //   .then(res => {
-  //     setShips(res.data.results)
-  //     console.log(res.data.results)
-  //   })
-  // }
 
   // set ships array in state to api call data once ( empty [])
   useEffect(() => {
     let url = `https://swapi.dev/api/starships/`
     axios.get(url)
     .then(res => {
-      console.log(res.data)
-      setShips([res.data])
+      console.log(res.data.results)
+      setShips(res.data.results)
     })
   }, [])
 
-  const showShips = () => {
-    ships.map((s, i) => {
-      console.log(s.name)
-      return (
-        <li key={i}>{s.name}</li>
-      )
-    })
-  }
+  // const showShips = () => {
+  //   ships.map((s, i) => {
+  //     console.log(s.name)
+  //     return (
+  //       <li key={i}>{s.name}</li>
+  //     )
+  //   })
+  // }
 
 
   return (
-    <div className="App">
-      <h1>Star Wars Starships</h1>
-      <button>get ships</button>
-      <button onClick={showShips}>show ships</button>
-      <ul>
-        {/* {showShips()} */}
-      </ul>
-    </div>
+    <Router>
+      <div className="App">
+        <nav>
+          <Link to='/'>Home</Link>{' '}
+        </nav>
+        <Route exact path='/' render={() => <Homepage ships={ships} /> } />
+      </div>
+    </Router>
+ 
   );
 }
 
