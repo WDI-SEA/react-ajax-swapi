@@ -1,10 +1,17 @@
 .detailDiv {
-    background-color: rgb(109, 109, 218);
-    width: 500px;
-    height: 400px;
-    padding: 15px;
-    margin: 20px auto;
-    color: white;
-    border-radius: 20px;
+  background-color: rgb(109, 109, 218);
+  width: 500px;
+  height: 450px;
+  padding: 15px;
+  margin: 20px auto;
+  color: white;
+  border-radius: 20px;
 
-  }
+}
+
+.pilotDiv {
+  margin: 0 auto;
+  width: 280px;
+  display: grid;
+  grid-template-columns: .5fr 1.5fr;
+}
