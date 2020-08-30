@@ -16,21 +16,21 @@ const Homepage = () => {
   }, [])
 
   return (
-      
-    <div>
-
-       
-        {ships.map((s,i) => {
-            return (
-                <Link 
-                    to={{
-                        pathname: 'starship',
-                        state: s
-                    }}
+    <div className="s-container">
+         
+      {ships.map((s,i) => {
+        return (
+        <div className="shipList">  
+            <Link 
+                to={{
+                    pathname: 'starship',
+                    state: s
+                }}
                     key={i}
                 >
-                    {s.name}
-                  </Link>
+                <button className="name">{s.name}</button>
+            </Link>
+        </div>   
               )
           })}
       </div>
