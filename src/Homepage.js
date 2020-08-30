@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react';
-import StarshipPage from './StarshipPage';
 import axios from 'axios';
 
 import {
@@ -33,7 +32,7 @@ const Homepage = (props) => {
           pathname: '/starship',
           state: s
         }}
-        key={s.name}
+        key={i}
         >
         {s.name} 
         </Link>

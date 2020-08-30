@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react';
 import './App.css';
-import axios from 'axios';
 
 import {
   BrowserRouter as Router,
@@ -26,9 +25,13 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Homepage />
+        {/* <Homepage /> */}
 
-        {/* <Route exact path='/' render={() => <Homepage /> } /> */}
+        <Route exact path='/' render={() => <Homepage /> } />
+        {/* <Route path='/starship_page' render={()=> <StarshipPage />} /> */}
+        <Route path='/starship' render={({location}) => 
+          <StarshipPage location={location}/>
+        }/>
       </div>
     </Router>
  
