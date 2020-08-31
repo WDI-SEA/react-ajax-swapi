@@ -9,19 +9,21 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 
 const StarWars = () => {
   const [ships, setShips] = useState([]);
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     let url = "https://swapi.dev/api/starships/";
     axios
       .get(url)
       .then((res) => {
+        setLoading(false)
         setShips(res.data.results);
       })
       .catch((error) => {
         console.log(error);
       });
   }, []);
-
+  if(!loading) {
   let shipLinks = ships.map((ship, i) => {
     return (
       <div key={i} className="Ship">
@@ -40,7 +42,6 @@ const StarWars = () => {
       </div>
     );
   });
-
   return (
     <Router>
       <div className='HomePage'>
@@ -51,6 +52,12 @@ const StarWars = () => {
          </div>
     </Router>
   )
+} else {
+  return(
+  <h1>Loading...</h1>
+  )
+}
+
 
 }
 
