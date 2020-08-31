@@ -5,7 +5,9 @@
 }
 
 .HomePage {
+    display: grid;
     text-align: center;
+    grid-template-columns: auto;
 }
 
 .Ship {
@@ -18,4 +20,16 @@
     font-size: 5px;
     align-content: center;
     text-align: center;
+}
+
+.StarshipColumn {
+    display: grid;
+    justify-content: center;
+}
+
+.StarShip {
+    height: 200px;
+    width: 200px;
+    margin-top: 35px;
+    border: 2px solid black;
 }
