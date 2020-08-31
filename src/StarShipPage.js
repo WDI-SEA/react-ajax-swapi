@@ -21,6 +21,8 @@ export default function StarShipPage(props) {
             <div className="detail">
             Name: {location.state.name}
             </div>
+            <br/>
+            
             <button className="goBack" onClick={goToHome}>Go Back</button>
         </div>
         

@@ -9,13 +9,14 @@ body{
 }
 .detail{
   color: white;
-  margin-top: 30px;
+  margin: 50px auto;
   background-color: goldenrod;
+  font-size: 40px;
 
 }
 .ti{
   color: goldenrod;
-  font-size: 50px;
+  font-size: 40px;
   font-family: Star Jedi;
 }i
 
@@ -50,9 +51,9 @@ body{
 
 }
 .contDiv{
-  height: 180px;
-  width: 300px;
-  margin: 200px auto;
+  height: 350px;
+  width: 500px;
+  margin: 300px auto;
   border: 3px solid whitesmoke;
   border-radius: 40px
  
