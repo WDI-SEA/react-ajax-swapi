@@ -27,7 +27,7 @@ export default function StarshipData(props) {
       </div>
       <br/> 
       <div classNmae="speed">
-          Top Speed: {location.state.max_atmosphering_speed}
+      Max earth-like atmospheric speed: {location.state.max_atmosphering_speed} km/h
       </div>
       <br/> 
       <div>
