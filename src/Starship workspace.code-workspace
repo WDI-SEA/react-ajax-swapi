@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../../labs/react-router-portfolio"
+		},
+		{
+			"path": "../../../codealongs/dentist-website-react-router"
+		},
+		{
+			"path": "../../../codealongs/react-burger-stacker"
+		}
+	],
+	"settings": {}
+}
