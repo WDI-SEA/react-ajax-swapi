@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './style.css';
 import {
   BrowserRouter as Router,
   Route,
@@ -14,6 +14,7 @@ function App() {
   return (
     <Router>
     <div className="App">
+    <h1 className="pageTitle">STAR WARS STARSHIPS</h1>
       <Route exact path='/' render={() => <Homepage/> } />
       <Route path='/starship' render={({location}) => <StarshipPage location={location}/> }/>
     </div>

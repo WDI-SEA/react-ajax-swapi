@@ -1,0 +1,48 @@
+.pageTitle {
+    background-color:#282D35;
+    color: white;
+    text-align: center;
+    margin-top: 0;
+}
+
+.ship-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-evenly;
+}
+
+.detail-container {
+    background-color: #2F4F4F;
+    border-radius: 9px;
+    color: white;
+    margin: 0 auto;
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-left: 9px;
+    padding-bottom: 9px;
+
+}
+
+.ship {
+    background-color: #2F4F4F;
+    border-radius: 9px;
+    margin: 15px;
+    height: 120px;
+    line-height: 120px;
+    text-align: center;
+    align-content: center; 
+}
+
+.shipLinks {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.goBackLink {
+    text-decoration: underline;
+    cursor: pointer;
+}

@@ -19,24 +19,27 @@ const Homepage = (props) => {
         })
       }, [])
 
+      
       ships = ships.map((s, i) => {
-        return (<li key={i}>
-            <Link to={{
-              pathname: '/starship',
+        return (<div key={i} className="ship">
+            <Link className="shipLinks" to={{
+              pathname: "/starship",
               state: s
             }}
             key={i}
             >
             {s.name} 
             </Link>
-        </li>
+        </div>
       )
       })
-
+      
       return(
         <div>
-          <h1>Starships from Star Wars!</h1>
+          {/* <h1 className="pageTitle">STAR WARS STARSHIPS</h1> */}
+          <div className="ship-container">
           {ships}
+          </div>
         </div>
       )
     }
