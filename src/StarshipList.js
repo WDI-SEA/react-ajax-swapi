@@ -1,13 +1,21 @@
 import React, {Component} from 'react'
 
-class Home extends Component {
+class StarshipList extends Component {
     render() {
+        console.log('🎊', this.props.ships.results)
+        // const shipList = this.props.ships.results.map((s, idx) => {
+        //     return <button key={idx}
+        //                 className="starshipButt">
+        //                 {s}</button>
+        // })
+        
         return (
             <div>
-                <button>Starships</button>
+                <h2>Starships</h2>
+                {/* {shipList} */}
             </div>
         )
     }
 }
 
-export default Home
+export default StarshipList
