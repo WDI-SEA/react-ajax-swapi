@@ -20,7 +20,7 @@ export default function Starship() {
     if (!loading) {
         return(
           <div className="container">
-          <h1 className="ti">Star Ships</h1>
+          <h1 className="ti">Star Wars Ships</h1>
                     {starShip = starShip.map((s, idx) => {
                         return(
 
