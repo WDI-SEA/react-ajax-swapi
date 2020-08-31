@@ -16,6 +16,9 @@ const Homepage = (props) => {
         .then(res => {
           //console.log(res.data.results)
           setShips(res.data.results) //setting state
+          if(!ships.length) { //loading function???
+            return <div>Loading</div>
+        }
         })
       }, [])
 
@@ -35,7 +38,7 @@ const Homepage = (props) => {
       })
       
       return(
-        <div>
+        <div className="mainBody">
           {/* <h1 className="pageTitle">STAR WARS STARSHIPS</h1> */}
           <div className="ship-container">
           {ships}
