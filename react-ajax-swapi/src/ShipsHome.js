@@ -18,12 +18,10 @@ export default function ShipsHome(props) {
             .catch(err => console.log(err));
         }, [])
 
-    let shipList = starShips.map((starShip, idx) => {
+        let shipList = starShips.map((starShip, idx) => {
         return (
-            <div key={idx}>
-                <button key={starShip.namstarShip}>
-                    <Link to={{pathname: './StarshipsPage', state: starShip}} key={starShip.name}>{starShip.name}</Link> 
-                </button>
+            <div key={idx} className="container-grid">
+                    <Link to={{pathname: './StarshipsPage', state: starShip}} key={starShip.name} style={{textDecoration: "none"}} className="buttons">{starShip.name}</Link> 
             </div>
         )
     })
