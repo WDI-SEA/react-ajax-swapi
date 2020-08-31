@@ -1,0 +1,80 @@
+
+*{
+  margin:0 auto;
+  
+}
+
+.data{
+  background-image: url("https://cdn.cnn.com/cnnnext/dam/assets/151214120732-star-wars-primer-background-super-43.jpg");
+  background-size: cover;
+  font-size: 40px;
+  text-align:center;
+  height:120vh;
+  width:100vw;
+  color:rgb(221, 138, 29);
+  font-family: 'Russo One', sans-serif;
+  margin-top:0;
+}
+.landing{
+  background-image:url("https://ak.picdn.net/shutterstock/videos/16692346/thumb/7.jpg");
+  font-size: 40px;
+  text-align:center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height:100%;
+  width:100%;
+  font-family: 'Russo One', sans-serif;
+  color:rgb(14, 68, 112);}
+.shipName{
+ /* font */
+ color:rgb(14, 68, 112);
+}
+button{
+  background-color: #5ca0f2;
+background-image: linear-gradient(315deg, #5ca0f2 0%, #f5f7f6 74%);
+  border: solid 4px  #5078f2;
+  
+  
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  border-radius: 50%;
+  font-family: 'Russo One', sans-serif;}
+ .dataName{
+  color:rgb(221, 138, 29)
+ }
+
+
+  .home{
+    background-color: #f6f0c4;
+    background-image: linear-gradient(315deg, #f6f0c4 0%, #d99ec9 74%);
+      border: solid 4px  #c67cf1;
+      
+      
+      color:rgb(238, 156, 49);
+      padding: 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      border-radius: 50%;
+      font-family: 'Russo One', sans-serif;
+
+  }
+
+
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
