@@ -8,6 +8,7 @@ import {
 } from "react-router-dom"
 
 import ShipsHome from './ShipsHome'
+import StarshipsPage from './StarshipsPage'
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
           <Link to="/">Go Back to Home</Link>
         </nav>
         <Route exact path="/" component={ShipsHome} />
-        <Route path="/StarshipsPage" render={({location}) => <StarshipPage location={location}/>}/>
+        <Route path="/StarshipsPage" render={({location}) => <StarshipsPage location={location}/>}/>
     </div>
     </Router>
   );
