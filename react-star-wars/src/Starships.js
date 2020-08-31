@@ -18,7 +18,12 @@ export default function Starships(props){
 				setStarShips(response.data.results);
 			})
 			.catch((err) => console.log(err));
-	}, []);
+    }, []);
+    
+    if(!starShips.length) {
+        return <div className="loading"> Loading...
+        </div>
+    }
  
     starShips = starShips.map((starShips, idx)=>{
     return(

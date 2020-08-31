@@ -49,7 +49,16 @@ background-image: linear-gradient(315deg, #5ca0f2 0%, #f5f7f6 74%);
   color:rgb(221, 138, 29)
  }
 
-
+.loading{
+  text-align: center;
+  /* background-color:rgb(224, 37, 68); */
+  color: black;
+  font-size:50px;
+  background-image:url("https://www.active-robots.com/wp/wp-content/uploads/2019/04/Sphero_BB_8_Programmable_robot__RC@@9aqzzz12.jpg");
+  background-repeat: no-repeat;
+  height: 400px;
+  width:300px;
+}
   .home{
     background-color: #f6f0c4;
     background-image: linear-gradient(315deg, #f6f0c4 0%, #d99ec9 74%);
