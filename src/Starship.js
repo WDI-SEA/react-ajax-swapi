@@ -5,6 +5,18 @@ import {
   } from 'react-router-dom';
 
 
+//   async function getPilots(urls) {
+//     let urls = `https://swapi.dev/api/starships/pilots`
+//     const promises = urls.map(url => fetch(url).then(res => res.json()));
+//     const pilotObjects = await Promise.all(promises);
+//     return pilotObjects;
+//   }
+  
+//   getPilots(urls).then(pilots => console.log(pilots));
+
+
+
+
 
 export default function Starship() {
 
@@ -18,6 +30,7 @@ useEffect(() => {
     }).catch(err => console.log(err))
 
 }, [])
+
 
 // {starships.length ? <StarShipPage  /> : <div>Loading..</div>}
 
