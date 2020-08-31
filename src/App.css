@@ -38,24 +38,51 @@
 }
 
 button {
-  height: 200px;
-  width: 200px;
+  height: 150px;
+  width: 300px;
+  background-color:#2f4f4f;
+  border-radius: 5px;
+  color: white;
+ 
 }
 
 .container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   align-items: end;
   justify-content: space-evenly;
-  margin: 100px auto;
+  margin: 20px auto;
+  
+  
 }
 
-.ship-item {
+.container2 {
   text-align: center;
   padding: 20px;
+  
+  
 }
 
 .goBack {
   height: auto;
   width: auto;
+}
+
+
+nav {
+  color: white;
+  background-color: #282c35;
+  
+}
+
+a:link {
+  text-decoration: none;
+  color: white;
+  
+}
+
+a:visited {
+  text-decoration: none;
+  color: white;
+  
 }

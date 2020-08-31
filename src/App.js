@@ -14,10 +14,15 @@ function App() {
   return (
    <Router>
   <Switch>
+    <div className='App'>
+    <nav>
+      <h1>STAR WARS STARSHIPS</h1>
+    </nav>
     <Route exact path='/' component={Starship}/>
     <Route path='/starship' render={({location}) => 
     <StarShipPage location={location}/>
     }/>
+    </div>
   </Switch>
    </Router>
   );

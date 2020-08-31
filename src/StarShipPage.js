@@ -2,6 +2,8 @@ import React from 'react';
 import {useLocation, useHistory} from 'react-router'
 
 
+
+
 export default function StarShipPage(props) {
     console.log(props, '🤮')
     console.log(props.location)
@@ -10,11 +12,9 @@ export default function StarShipPage(props) {
     function goToHome() {
         history.goBack()
     }
-
-
     return(
-        <div>
-            
+        <div className='ship-item'>
+            <button>
             <div>
             Model: {location.state.model}
             </div>
@@ -24,6 +24,7 @@ export default function StarShipPage(props) {
         <div>
             <button className="goBack" onClick={goToHome}>Go Back</button>
         </div>
+            </button>
         </div>
     )
 }

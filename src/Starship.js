@@ -18,12 +18,19 @@ useEffect(() => {
     }).catch(err => console.log(err))
 
 }, [])
+
+// {starships.length ? <StarShipPage  /> : <div>Loading..</div>}
+
+if (!starships.length) {
+    return <div>Loading...</div>
+}
+
 return(
-<div className="container">
+ <div className="container"> 
         {starships = starships.map((starship, index) => {
         return(
 
-            <div className="ship-item" key={index}>
+            <div className="container2" key={index}>
             <button>
             <Link
             to={{
