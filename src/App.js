@@ -4,7 +4,7 @@ import Header from './components/Header';
 import Starships from './containers/Starships';
 import StarshipDetails from './containers/StarshipDetails';
 // import Content from './components/Content';
-// import Footer from './components/Footer';
+import Footer from './components/Footer';
 import './App.css';
 
 function App() {
@@ -14,19 +14,19 @@ function App() {
 				<header>
 					<Header />
 				</header>
-				<Switch>
-					<Route exact path='/' render={() => <Starships />} />
-					<Route
-						path='/starshipdetails'
-						render={props => <StarshipDetails {...props} />}
-					/>
-				</Switch>
-				{/* <main>
-					<Content />
+				<main>
+					<Switch>
+						<Route exact path='/' render={() => <Starships />} />
+						<Route
+							path='/starshipdetails'
+							render={props => <StarshipDetails {...props} />}
+						/>
+					</Switch>
+					{/* <Content /> */}
 				</main>
 				<footer>
 					<Footer />
-				</footer> */}
+				</footer>
 			</div>
 		</Router>
 	);

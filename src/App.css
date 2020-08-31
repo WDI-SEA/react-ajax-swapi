@@ -1,38 +1,62 @@
-.App {
-  text-align: center;
+body {
+	background: url('https://wallpaperaccess.com/full/11794.png') no-repeat center
+		center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	margin: 0 auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.fleet {
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(4, 1fr);
+	text-align: center;
+	padding-top: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.shipbox {
+	border-radius: 10px;
+	border: 5px black solid;
+	color: white;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.abandonShip {
+	color: rgb(255, 215, 0);
+	font-weight: bold;
+	display: flex;
+	justify-content: center;
+	font-size: 30px;
+	font-weight: bold;
 }
 
-.App-link {
-  color: #61dafb;
+.shipbox2 {
+	padding-top: 20px;
+}
+.fleetdeetz {
+	border-radius: 10px;
+	border: 5px black solid;
+	color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.headerForce {
+	background: black;
+	color: rgb(255, 215, 0);
+	display: flex;
+	justify-content: center;
+	text-align: center;
+}
+
+.footerForce {
+	background: black;
+	color: rgb(255, 215, 0);
+	position: fixed;
+	padding: 10px 10px 0px 10px;
+	bottom: 0;
+	width: 100%;
+	/* Height of the footer*/
+	height: 40px;
+	text-align: center;
 }
