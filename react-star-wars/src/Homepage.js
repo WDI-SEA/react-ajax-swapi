@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
-import StarshipPage from './StarshipPage';
+
 import {
   BrowserRouter as Router,
   Route,
@@ -9,23 +9,23 @@ import {
 
 const Homepage = (props) => {
     console.log(props)
-    let [ships, setShips] = useState([])
+    let [ships, setShips] = useState([]) //holding the starships in state
     useEffect(() => {
-        let url = `https://swapi.dev/api/starships/`
+        let url = `https://swapi.dev/api/starships/` //getting data from API
         axios.get(url)
         .then(res => {
-          console.log(res.data.results)
-          setShips(res.data.results)
+          //console.log(res.data.results)
+          setShips(res.data.results) //setting state
         })
       }, [])
 
       ships = ships.map((s, i) => {
         return (<li key={i}>
             <Link to={{
-              pathname: 'starship',
+              pathname: '/starship',
               state: s
             }}
-            key={s.name}
+            key={i}
             >
             {s.name} 
             </Link>
@@ -35,11 +35,10 @@ const Homepage = (props) => {
 
       return(
         <div>
-          <h1>Starships</h1>
+          <h1>Starships from Star Wars!</h1>
           {ships}
         </div>
       )
-    
     }
     
     export default Homepage; 
