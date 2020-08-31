@@ -8,7 +8,7 @@ import {
 } from 'react-router-dom';
 
 import Homepage from './Homepage';
-import StarshipPage from './StarshipPage';
+
 
 function App() {
   const [ships, setShips] = useState([])
@@ -30,6 +30,7 @@ function App() {
         <Link to='/'>Home</Link>{' '}
       </nav>
       <Route exact path='/' render={() => <Homepage ships={ships} /> } />
+      {/* <Homepage /> */}
     </div>
   </Router>
   );
