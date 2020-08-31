@@ -18,22 +18,24 @@ export default function ShipsHome(props) {
             .catch(err => console.log(err));
         }, [])
 
-        if(!loading) {
-            {let shipList = starShips.map((starShip, idx) => {
-                return (
-                    <div key={idx} className="container-grid">
+        if(starShips.length) {
+        let shipList = starShips.map((starShip, idx) => {
+            return (
+            <div key={idx} className="container-grid">
                     <Link to={{pathname: './StarshipsPage', state: starShip}} key={starShip.name} style={{textDecoration: "none"}} className="buttons">{starShip.name}</Link> 
             </div>
-                )
-            })}
-        } else {
-            <h1>Loading...</h1>
-        }
-
-    return(
+            )
+        })
+        
+        return(
         <div>
             <h1>Star Ships</h1>
             {shipList}
         </div>
-    )
-}
+        )
+        } else {
+            return (
+                <h1>loading...</h1>
+            )
+        }
+    }
