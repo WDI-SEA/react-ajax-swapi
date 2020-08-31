@@ -7,11 +7,21 @@ import {
 } from 'react-router-dom'
 import Axios from 'axios'
 
+import StarshipList from './StarshipList'
+import Detail from './Detail'
+
+
 function App() {
   return (
-    <div className="App">
-      <h1>Don't Fall Asleep</h1>
-    </div>
+    <Router>
+      <div className="App">
+          <header>
+            <h1 style={{background: 'teal', color: 'purple'}}>Star Wars Starships</h1>
+          </header>
+          <Route exact path="/" component={StarshipList} />
+          <Route exact path="/detail" component={Detail} />
+      </div>
+    </Router>
   );
 }
 
