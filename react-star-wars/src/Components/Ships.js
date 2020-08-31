@@ -19,7 +19,7 @@ const Ships = (props) => {
   }, []);
 
   return (
-    <div>
+    <div className='StarWars'>
       <ShipResults ships={ships} />
     </div>
   );

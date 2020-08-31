@@ -6,7 +6,8 @@ const HomeStar = () => {
 
 
     return (
-        <div>
+        <div className="HomePage">
+            <h1>Check out my Sweet Ships</h1>
         <Ships />
         </div>
     )
