@@ -14,9 +14,6 @@ function App() {
   return (
     <Router>
     <div className="App">
-        <nav>
-          <Link to="/">Go Back to Home</Link>
-        </nav>
         <Route exact path="/" component={ShipsHome} />
         <Route path="/StarshipsPage" render={({location}) => <StarshipsPage location={location}/>}/>
     </div>
