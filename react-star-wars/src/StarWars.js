@@ -44,7 +44,6 @@ const StarWars = () => {
   return (
     <Router>
       <div className='HomePage'>
-        <h1>The Fleet</h1>
         <Route exact path='/' render={() => <ShipResults ShipResults={shipLinks}/>} />
         <Route path='/ship' render={({location}) =>
          <StarShip location={location}/>

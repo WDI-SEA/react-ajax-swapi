@@ -1,28 +1,39 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
-
 const PilotList = (props) => {
+  const [pilots, setPilots] = useState([])
   let pilotUrls = props.pilots;
-  const funcAsync = async () => {
-    const asyncUrls = await Promise.all(
-      pilotUrls.map(async (pilot, i) => {
-        try {
-          let results = await axios
-            .get(pilot)
-            .then((res) => {
-              return res;
-            })
-            .catch((error) => {
-              console.log(error);
-            });
-        } catch (error) {
-          console.log(error);
-        }
-      })
+
+  async function getPilots(urls) {
+    const promises = urls.map((url) =>
+      axios
+        .get(url)
+        .then((res) => <li key={res.data.name}>{res.data.name}</li>)
     );
-  };
-  funcAsync();
-  return <div>{PilotList}</div>;
+    const pilotObjects = await Promise.all(promises);
+    return pilotObjects;
+  }
+  useEffect(() => {
+  if(pilotUrls.length > 0) {
+  getPilots(pilotUrls)
+    .then((res) => {
+      setPilots(res)
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+  } else {
+    setPilots(['There are no Pilots'])
+  }
+}, [])
+  return(
+    <div>
+      <h5>Pilots</h5>
+      <ul>
+        {pilots}
+      </ul>
+    </div>
+  )
 };
 
 export default PilotList;
