@@ -13,7 +13,7 @@ export default function StarShipPage(props) {
         history.goBack()
     }
     return(
-        <div className='ship-item'>
+        <div className='containter2'>
             <button>
             <div>
             Model: {location.state.model}

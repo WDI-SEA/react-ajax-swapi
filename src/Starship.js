@@ -16,8 +16,6 @@ import {
 
 
 
-
-
 export default function Starship() {
 
 let [starships, setStarships] = useState([])
