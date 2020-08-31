@@ -1,6 +1,7 @@
 import React from 'react';
 
-const StarShip = () => {
+const StarShip = (props) => {
+    console.log(props.s)
 
     return(
         <div>

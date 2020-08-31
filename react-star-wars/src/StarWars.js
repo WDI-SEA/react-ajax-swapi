@@ -12,7 +12,7 @@ const StarWars = () => {
     <Router>
       <div>
         <Route exact path='/' render={(props) => <HomeStar />} />
-        <Route path='/ship' render={(props) => <StarShip />}/>
+        <Route exact path='/ship/:id' render={(props) => <StarShip />}/>
       </div>
     </Router>
   )

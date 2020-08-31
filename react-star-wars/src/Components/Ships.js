@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 import ShipResults from "./ShipResults";
+import StarShip from "./StarShip";
 
 const Ships = (props) => {
   const [ships, setShips] = useState([]);
@@ -21,6 +22,7 @@ const Ships = (props) => {
   return (
     <div className='StarWars'>
       <ShipResults ships={ships} />
+      <StarShip ships={ships} />
     </div>
   );
 };
