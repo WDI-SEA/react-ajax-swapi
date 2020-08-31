@@ -13,6 +13,7 @@ function App() {
 
   return (
     <Router>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"></link>
     <div className="App">
     <h1 className="pageTitle">STAR WARS STARSHIPS</h1>
       <Route exact path='/' render={() => <Homepage/> } />

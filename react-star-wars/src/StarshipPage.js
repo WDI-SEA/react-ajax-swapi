@@ -6,12 +6,11 @@ const StarshipPage = (props) => {
   let history = useHistory();
   return(
     <div className="detail-container">
-      <h1>{props.location.state.name} Details</h1>
-      <h3>Name: {props.location.state.name}</h3>
-      <h3>Model: {props.location.state.model}</h3>
-      <h3>Passengers: {props.location.state.passengers}</h3>
-      <h3>Manufacturer: {props.location.state.manufacturer}</h3>
-      <h3 className="goBackLink" onClick={() => history.goBack()}>Go Back</h3>
+      <h3>NAME:{" "} { props.location.state.name} </h3>
+      <h3>MODEL:{" "} { props.location.state.model}</h3>
+      <h3>PASSENGERS:{" "} { props.location.state.passengers}</h3>
+      <h3>MANUFACTURER:{" "} { props.location.state.manufacturer}</h3>
+      <h3 className="goBackLink" onClick={() => history.goBack()}>RETURN</h3>
     </div>
   )
 }
