@@ -12,7 +12,7 @@ In this deliverable, you'll consume the [Star Wars API](https://swapi.dev/) and 
 - `Fork` and `clone` this repo
 - Use `npx create-react-app` to create a React app named `react-star-wars`
 - `cd` into `react-star-wars` and open VS Code.
-- `npm i axios` to be able to access this API
+- `npm i axios react-router-dom` to be able to access this API
 
 ## Setup
 - Since we'll be using a Router, we'll need to import BrowserRouter in `index.js` and wrap it around `App`.
