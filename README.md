@@ -14,7 +14,7 @@ In this deliverable, you'll consume the [Star Wars API](https://swapi.dev/) and 
 - `cd` into `react-star-wars` and open VS Code.
 
 ## Setup
-- Since we'll be using a Router, we'll need to import BrowserRouter and wrap it around `App`.
+- Since we'll be using a Router, we'll need to import BrowserRouter in `index.js` and wrap it around `App`.
 ```js
 import {BrowserRouter} from 'react-router-dom'
 
@@ -28,11 +28,21 @@ ReactDOM.render(
 );
 ```
 
+- We'll also need to create a `Router.js` component that will create `Routes` to several components inside of a `Switch`.
+- In `App.js` we need to import and render our `Router`
+- From here, we'll need 3 more components:
+- `Home.js`
+- `StarshipPage.js`
+- 
+
 ## Exercises
 
 > Styling is secondary to completing the functionality, but feel free to style if you complete this early.
 
-### 1. Obtain all of the starships from the API and render in `<App>` a clickable `<Link>` (imported from `react-router-dom`) for each starship. The link should be styled to look like a button and contain the text of the starship's name.  For example:
+### 1. Obtain all of the starships from the API and render in `<Router>` a clickable `<Link>` (imported from `react-router-dom`) that displays information for each starship. 
+- `useEffect` and `useState` will be _useful_ in accomplishing this goal.
+- The link should be styled so that the text of the starship's name is visible.  For example:
+
 
 <img src="https://i.imgur.com/VERV0nk.png">
 
