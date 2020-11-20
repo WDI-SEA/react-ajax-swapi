@@ -42,7 +42,7 @@ ReactDOM.render(
 
 
 
-### 1. Router.js
+### Router.js
 - `useEffect` and `useState` will be _useful_ in accomplishing this goal.
 - You'll need to make an axios call to the Star Wars API within your `Router` component with `useEffect` to get all Starships: https://swapi.dev/api/starships
 - You'll also need to create a `useState` variable `starships` at the top of your `Router` component and set its state within your `useEffect` to all of the starships from the API.
