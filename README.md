@@ -12,6 +12,7 @@ In this deliverable, you'll consume the [Star Wars API](https://swapi.dev/) and 
 - `Fork` and `clone` this repo
 - Use `npx create-react-app` to create a React app named `react-star-wars`
 - `cd` into `react-star-wars` and open VS Code.
+- `npm i axios` to be able to access this API
 
 ## Setup
 - Since we'll be using a Router, we'll need to import BrowserRouter in `index.js` and wrap it around `App`.
@@ -30,21 +31,53 @@ ReactDOM.render(
 
 - We'll also need to create a `Router.js` component that will create `Routes` to several components inside of a `Switch`.
 - In `App.js` we need to import and render our `Router`
-- From here, we'll need 3 more components:
+- From here, we'll need 2 more components:
 - `Home.js`
 - `StarshipPage.js`
-- 
+
 
 ## Exercises
 
 > Styling is secondary to completing the functionality, but feel free to style if you complete this early.
 
-### 1. Obtain all of the starships from the API and render in `<Router>` a clickable `<Link>` (imported from `react-router-dom`) that displays information for each starship. 
-- `useEffect` and `useState` will be _useful_ in accomplishing this goal.
-- The link should be styled so that the text of the starship's name is visible.  For example:
 
+
+### 1. Router.js
+- `useEffect` and `useState` will be _useful_ in accomplishing this goal.
+- You'll need to make an axios call to the Star Wars API within your `Router` component with `useEffect` to get all Starships: https://swapi.dev/api/starships
+- You'll also need to create a `useState` variable `starships` at the top of your `Router` component and set its state within your `useEffect` to all of the starships from the API.
+- Inside of your `Switch` you'll need 2 routes. One with an exact path of `/` and one with a path of `/starships'
+- The `/` route should render your `Home` component, which should also have a prop called `starships'
+- The `/starships` route will render the `StarshipPage` component, but its render will be utilizing `props.location` to render a single starship, like so:
+```js
+render={(props) => <StarshipPage location={props.location} />} >
+```
+
+### Home.js
+- Your home page will render clickable links for every starship in the starship state. Example:
 
 <img src="https://i.imgur.com/VERV0nk.png">
+
+- Each link should have a `location` defined by the current state of the starships state
+- This location will be used to define the specific path to an individual starship.
+```js
+{props.starships.map(starship => {
+  let location = {
+    pathname: '/starship',
+    state: starship
+  }
+  return (
+    <Link
+      to={location}
+      key={starship.name}
+    >
+      {starship.name}
+    </Link>
+  )
+})
+```
+- If there are no starships, your `Home` page should display that it is `Loading...`
+
 
 ### 2. When a starship `<Link>` is clicked a `<StarshipPage>` component should be rendered that displays the starship's `name`, `model` and a "Return to Starship List" `<Link>` that routes back to the root route that renders `<App>`. For example:
 
