@@ -34,11 +34,11 @@ ReactDOM.render(
 
 ### 1. Obtain all of the starships from the API and render in `<App>` a clickable `<Link>` (imported from `react-router-dom`) for each starship. The link should be styled to look like a button and contain the text of the starship's name.  For example:
 
-	<img src="https://i.imgur.com/VERV0nk.png">
+<img src="https://i.imgur.com/VERV0nk.png">
 
 ### 2. When a starship `<Link>` is clicked a `<StarshipPage>` component should be rendered that displays the starship's `name`, `model` and a "Return to Starship List" `<Link>` that routes back to the root route that renders `<App>`. For example:
 
-	<img src="https://i.imgur.com/IjRwsHk.png">
+<img src="https://i.imgur.com/IjRwsHk.png">
 
 ### 3. Because the data is being loaded asynchronously, there are times, such as if the user refreshes the page while viewing the `<StarshipPage>`, that the data won't be available to render, in this case, display a "Loading..." message instead.
 
