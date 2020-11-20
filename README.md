@@ -6,30 +6,41 @@
 
 ## Intro
 
-In this deliverable, you'll consume the [Star Wars API](https://swapi.dev/) and render it's data.
+In this deliverable, you'll consume the [Star Wars API](https://swapi.dev/) and render it's data utilizing the `useState` and `useEffect` React hooks within a React Router.
 
-## Set Up
-
-To get set up:
-
-- Use `create-react-app` to create a React app named `react-star-wars`
+## To Get Started
+- `Fork` and `clone` this repo
+- Use `npx create-react-app` to create a React app named `react-star-wars`
 - `cd` into `react-star-wars` and open VS Code.
-- Open a terminal in VS Code.
-- Start the React Dev Server.
+
+## Setup
+- Since we'll be using a Router, we'll need to import BrowserRouter and wrap it around `App`.
+```js
+import {BrowserRouter} from 'react-router-dom'
+
+ReactDOM.render(
+  <React.StrictMode>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </React.StrictMode>,
+  document.getElementById('root')
+);
+```
 
 ## Exercises
 
-> Styling is secondary to completing the functionality
+> Styling is secondary to completing the functionality, but feel free to style if you complete this early.
 
-1. Obtain all of the starships from the API and render in `<App>` a clickable `<Link>` (imported from `react-router-dom`) for each starship. The link should be styled to look like a button and contain the text of the starship's name.  For example:
+### 1. Obtain all of the starships from the API and render in `<App>` a clickable `<Link>` (imported from `react-router-dom`) for each starship. The link should be styled to look like a button and contain the text of the starship's name.  For example:
 
 	<img src="https://i.imgur.com/VERV0nk.png">
 
-2. When a starship `<Link>` is clicked a `<StarshipPage>` component should be rendered that displays the starship's `name`, `model` and a "Return to Starship List" `<Link>` that routes back to the root route that renders `<App>`. For example:
+### 2. When a starship `<Link>` is clicked a `<StarshipPage>` component should be rendered that displays the starship's `name`, `model` and a "Return to Starship List" `<Link>` that routes back to the root route that renders `<App>`. For example:
 
 	<img src="https://i.imgur.com/IjRwsHk.png">
 
-5. Because the data is being loaded asynchronously, there are times, such as if the user refreshes the page while viewing the `<StarshipPage>`, that the data won't be available to render, in this case, display a "Loading..." message instead.
+### 3. Because the data is being loaded asynchronously, there are times, such as if the user refreshes the page while viewing the `<StarshipPage>`, that the data won't be available to render, in this case, display a "Loading..." message instead.
 
 ## Hints
 
