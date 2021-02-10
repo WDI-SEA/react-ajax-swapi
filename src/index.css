@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.Header{
+  text-align: center;
+  height: 10vh;
+}
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.starships-container{
+  
+  height: 90vh;
+  width: 70vw;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+
+}
+
+.starship-link{
+  width: 20vw;
+  height: 15vh;
+  border: 2px solid green;
+  margin: 1em;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
