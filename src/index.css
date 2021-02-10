@@ -30,6 +30,9 @@ main {
   justify-content: space-around;
 
 }
+.starships-container > a{
+  text-decoration: none;
+}
 
 .starship-link{
   width: 20vw;
@@ -40,4 +43,5 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+  
 }

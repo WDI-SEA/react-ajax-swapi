@@ -4,9 +4,11 @@ const Starships = (props) => {
   let ships = props.starships.map((starship, i ) => {
       return (
       
-          <Link to={`/${starship.name}`} key={`starship-${i}`} >
+          <Link className="link" to={`/${starship.name}`} key={`starship-${i}`} >
             <div className="starship-link">
-              {starship.name}
+              <h2>
+                {starship.name}
+              </h2>
             </div>
             
           </Link>
