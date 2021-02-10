@@ -1,6 +1,7 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Route, Link, Switch } from 'react-router-dom';
+import Ship from './Ship'
 
 const Ships = (props) => {
     let ships
@@ -18,10 +19,23 @@ const Ships = (props) => {
         }); 
     } 
     return(
-        <div>
-            <h1>Star Wars Ships</h1>
-            {ships}
-        </div>
+            <div>
+                <h1>Star Wars Ships</h1>
+                <Switch>
+                    <Route
+                        path='/'
+                    >
+                        {ships}
+                    </Route>
+                    <Route
+                        path='/ship/:name'
+                        render={({location}) => <Ship location={location}/>}
+                        />
+                        {ships}
+                    <Route/>
+                </Switch>
+            </div>
+
     )
 }
 
