@@ -10,7 +10,7 @@ const Ships = (props) => {
             return (
                 <li key={i}>
                     <Link to={{
-                        pathname: `/${ship.name}`,
+                        pathname: `/ship/${ship.name}`,
                         state: {ships:ship}
                     }}>{ship.name}</Link>
                 </li>
